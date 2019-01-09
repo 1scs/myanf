@@ -1,2 +1,3 @@
-# myanfc
-Repository of all myanfc code.
+---
+permalink: /index.html
+---

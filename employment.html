@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Employment — ANFC</title>
+    <meta name="description" content="Join ANFC and make a meaningful impact. Explore roles for RNs, LPNs/LVNs, CNAs, CMAs, and caregivers." />
+    <link rel="stylesheet" href="assets/css/styles.css?v=703572" />
+    <meta name="theme-color" content="#703572" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>
+            <div class="brand-name">ANFC</div>
+            <div class="brand-sub">Advanced Nursing & Family Care</div>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="employment.html" aria-current="page">Employment</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="contact.html">Get Care</a>
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+      </div>
+      <div id="mobile-menu" class="container mobile-menu" hidden>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="employment.html" aria-current="page">Employment</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 data-animate>Employment Opportunities</h1>
+          <p class="muted" data-animate style="max-width: 75ch">ANFC is always looking for exceptional people. If you are a caring, qualified, and credentialed nursing professional or non-medical companion, we want you to join our team.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container grid-2">
+          <div class="card" data-animate>
+            <h3>Open roles</h3>
+            <ul class="checklist" style="margin-top:.5rem">
+              <li><span class="check"></span><span>Registered Nurse (RN)</span></li>
+              <li><span class="check"></span><span>Licensed Practical/Vocational Nurse (LPN/LVN)</span></li>
+              <li><span class="check"></span><span>Certified Nursing Assistant (CNA)</span></li>
+              <li><span class="check"></span><span>Home Health Aide (HHA)</span></li>
+              <li><span class="check"></span><span>Non-medical Companions</span></li>
+            </ul>
+          </div>
+          <div class="card" data-animate>
+            <h3>Apply now</h3>
+            <p class="muted">Please upload your resume below or email your resume and contact information to us at <strong>jobs@myanfc.com</strong>.</p>
+            <form action="https://formspree.io/f/mwkgbvnl" method="POST" class="form-grid" style="margin-top:.75rem">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="full">
+                <label for="role">Role of interest</label>
+                <select id="role" name="role">
+                  <option>RN</option>
+                  <option>LPN/LVN</option>
+                  <option>CNA</option>
+                  <option>CMA</option>
+                  <option>Caregiver / HHA</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="message">Experience summary</label>
+                <textarea id="message" name="message" placeholder="Years of experience, certifications, preferred shifts..."></textarea>
+              </div>
+              <div class="full">
+                <button class="btn btn-primary" type="submit">Submit application</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="text-decoration:none">
+            <span class="brand-logo" aria-hidden="true"></span>
+            <span>
+              <div class="brand-name">ANFC</div>
+              <div class="brand-sub">Advanced Nursing & Family Care</div>
+            </span>
+          </div>
+          <p class="muted" style="margin-top:.75rem; max-width:60ch">Compassionate homecare, dependable staffing, and thoughtful placements across DC, Maryland, and Virginia.</p>
+          <div class="copyright">© <span id="y"></span> ANFC. All rights reserved.</div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="employment.html">Employment</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#homecare">Homecare</a>
+          <a href="services.html#facilities">Healthcare Facilities</a>
+          <a href="services.html#recruiting">Recruiting & Placement</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector('.mobile-toggle');
+      const menu = document.querySelector('#mobile-menu');
+      btn?.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (isOpen) { menu?.classList.remove('open'); menu?.setAttribute('hidden', ''); }
+        else { menu?.classList.add('open'); menu?.removeAttribute('hidden'); }
+      });
+      const y = document.getElementById('y'); if (y) y.textContent = String(new Date().getFullYear());
+      const observer = new IntersectionObserver((entries) => { entries.forEach((e)=> e.isIntersecting && e.target.classList.add('in-view')); }, { threshold: 0.1 });
+      document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
+
+

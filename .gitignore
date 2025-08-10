@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node/Front-end
+node_modules/
+dist/
+build/
+.cache/
+.next/
+out/
+*.log
+
+# Env
+.env
+.env.*
+
+# Misc
+Thumbs.db
+*.swp
+

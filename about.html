@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — ANFC</title>
+    <meta name="description" content="Learn about ANFC’s mission, values, and commitment to compassionate, high-quality care across the DMV." />
+    <link rel="stylesheet" href="assets/css/styles.css?v=703572" />
+    <meta name="theme-color" content="#703572" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>
+            <div class="brand-name">ANFC</div>
+            <div class="brand-sub">Advanced Nursing & Family Care</div>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="employment.html">Employment</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="contact.html">Get Care</a>
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+      </div>
+      <div id="mobile-menu" class="container mobile-menu" hidden>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="employment.html">Employment</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 data-animate>Advanced Nursing and Family Care (ANFC)</h1>
+          <p class="muted" data-animate style="max-width: 75ch">With statistical data reports reflecting a shortage of nursing professionals across the United States, it is reasonable to assume that the number of caring nursing professionals is also substantially low. ANFC saw this as an opportunity to help people and committed to identifying caring nursing professionals to meet this demand.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container grid-2">
+          <div data-animate>
+            <div class="eyebrow">Our Mission</div>
+            <h2 class="section-title">Quality and compassion are absolute musts</h2>
+            <p class="section-desc">ANFC was established on the belief that quality and compassion are absolute musts when providing healthcare. With allegiance to both its clients and staff, ANFC strives to be the industry leader in client service and one of the best places to work.</p>
+          </div>
+          <div class="card" data-animate>
+            <h3>Our Values</h3>
+            <ul class="checklist" style="margin-top:.5rem">
+              <li><span class="check"></span><span>Compassion and dignity in every interaction</span></li>
+              <li><span class="check"></span><span>Professional excellence and accountability</span></li>
+              <li><span class="check"></span><span>Integrity and transparency with families and partners</span></li>
+              <li><span class="check"></span><span>Continuous learning and improvement</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container grid-2">
+          <div class="card" data-animate>
+            <h3>Coverage</h3>
+            <p class="muted">Licensed and insured in Washington, DC, Maryland, and Virginia. Reach out to confirm service availability in your area.</p>
+          </div>
+          <div class="card" data-animate>
+            <h3>Quality & Safety</h3>
+            <p class="muted">Thorough background checks, credential verification, and ongoing supervision ensure consistent, high-quality care.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="text-decoration:none">
+            <span class="brand-logo" aria-hidden="true"></span>
+            <span>
+              <div class="brand-name">ANFC</div>
+              <div class="brand-sub">Advanced Nursing & Family Care</div>
+            </span>
+          </div>
+          <p class="muted" style="margin-top:.75rem; max-width:60ch">Compassionate homecare, dependable staffing, and thoughtful placements across DC, Maryland, and Virginia.</p>
+          <div class="copyright">© <span id="y"></span> ANFC. All rights reserved.</div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="employment.html">Employment</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#homecare">Homecare</a>
+          <a href="services.html#facilities">Healthcare Facilities</a>
+          <a href="services.html#recruiting">Recruiting & Placement</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector('.mobile-toggle');
+      const menu = document.querySelector('#mobile-menu');
+      btn?.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (isOpen) { menu?.classList.remove('open'); menu?.setAttribute('hidden', ''); }
+        else { menu?.classList.add('open'); menu?.removeAttribute('hidden'); }
+      });
+      const y = document.getElementById('y'); if (y) y.textContent = String(new Date().getFullYear());
+      const observer = new IntersectionObserver((entries) => { entries.forEach((e)=> e.isIntersecting && e.target.classList.add('in-view')); }, { threshold: 0.1 });
+      document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
+
+

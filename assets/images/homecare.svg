@@ -1,0 +1,8 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8fafc"/>
+  <path d="M200 60 L160 100 L160 200 L240 200 L240 100 Z" fill="#703572" opacity="0.8"/>
+  <rect x="180" y="140" width="40" height="60" fill="white"/>
+  <rect x="190" y="150" width="20" height="20" fill="#703572" opacity="0.6"/>
+  <circle cx="200" cy="80" r="8" fill="#703572" opacity="0.6"/>
+  <text x="200" y="250" text-anchor="middle" fill="#703572" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Home Care</text>
+</svg>

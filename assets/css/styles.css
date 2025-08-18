@@ -69,7 +69,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 0;
+  padding: 0.5rem 0;
+  min-height: 80px;
 }
 .brand {
   display: flex;
@@ -78,20 +79,21 @@ body {
   text-decoration: none;
 }
 .brand-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
-  box-shadow: 0 10px 20px rgba(112, 53, 114, 0.25);
+  width: 180px;
+  height: 180px;
+  background: url('../../Logo/ANFC_Logo.png') no-repeat center center;
+  background-size: contain;
 }
 .brand-name {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--brand-secondary);
+  display: none;
 }
 .brand-sub {
   font-size: 0.8rem;
   color: var(--brand-muted);
+  display: none;
 }
 
 .nav-links {
@@ -171,8 +173,37 @@ body {
   padding: 5rem 0 3rem;
   background: radial-gradient(1200px 600px at 20% -10%, rgba(112,53,114,.15), transparent 60%),
               radial-gradient(1200px 600px at 80% 0%, rgba(112,53,114,.12), transparent 60%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 .hero-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-text {
+  max-width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .hero h1 { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -0.02em; }
 .hero p { color: var(--brand-muted); font-size: clamp(1rem, 1.6vw, 1.125rem); margin-top: 1rem; }
 .hero-cta { margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
@@ -214,19 +245,61 @@ section { padding: 3rem 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px; height: 44px;
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
+  width: 60px; height: 60px;
+  font-size: 2rem;
+  color: var(--brand-primary);
+  background: none;
+  border: 2px solid var(--brand-primary);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  background: var(--brand-primary);
   color: #fff;
-  box-shadow: 0 10px 20px rgba(112,53,114,0.25);
+  transform: scale(1.1);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.service-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Lists */
 .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
 .checklist li { display: grid; grid-template-columns: 1.5rem 1fr; gap: 0.5rem; align-items: start; }
 .checklist .check {
-  width: 1.2rem; height: 1.2rem; border-radius: 0.35rem;
-  background: linear-gradient(135deg, var(--brand-secondary-accent), var(--brand-secondary-accent-600));
+  width: 1.2rem; height: 1.2rem; border-radius: 50%;
+  background: var(--brand-primary);
+  position: relative;
+}
+
+.checklist .check::before {
+  content: "✓";
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .muted { color: var(--brand-muted); }
 
@@ -241,15 +314,100 @@ section { padding: 3rem 0; }
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--brand-border);
-  background: var(--brand-surface);
-  padding: 2rem 0 3rem;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-600) 100%);
+  padding: 3rem 0 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4rem;
 }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.25rem; }
-.footer-col h4 { font-weight: 700; margin-bottom: 0.5rem; }
-.footer-col a { color: var(--brand-muted); text-decoration: none; display: block; padding: 0.25rem 0; }
-.footer-col a:hover { color: var(--brand-secondary); }
-.copyright { color: var(--brand-muted); font-size: 0.95rem; margin-top: 1.25rem; }
-@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr; } }
+
+
+.footer-grid { 
+  display: grid; 
+  grid-template-columns: 1.5fr 1fr 1fr 1fr; 
+  gap: 2rem; 
+  align-items: start;
+}
+.site-footer .muted { color: rgba(255, 255, 255, 0.8); }
+.footer-col h4 { font-weight: 700; margin-bottom: 0.5rem; color: white; }
+.footer-col a { color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; padding: 0.25rem 0; transition: color 0.3s ease; }
+.footer-col a:hover { color: white; }
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.footer-logo .brand-logo {
+  width: 180px;
+  height: 180px;
+  background: url('../../Logo/ANFC_Logo.png') no-repeat center center;
+  background-size: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.footer-logo .brand-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-logo .brand-sub {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+.copyright { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-top: 1.25rem; }
+
+/* Copyright Section */
+.copyright-section {
+  background: var(--brand-secondary);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.copyright-section .copyright {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin: 0;
+}
+@media (max-width: 900px) { 
+  .footer-grid { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem;
+  }
+  .footer-logo {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) { 
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .footer-grid { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+    text-align: center;
+  }
+  .footer-logo {
+    align-items: center;
+  }
+  .footer-logo .brand-logo {
+    width: 140px;
+    height: 140px;
+  }
+}
 
 /* Forms */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -286,5 +444,19 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, te
 /* Reveal animations */
 [data-animate] { opacity: 0; transform: translateY(12px); transition: 500ms ease; }
 [data-animate].in-view { opacity: 1; transform: translateY(0); }
+
+/* Responsive logo */
+@media (max-width: 600px) {
+  .brand-logo {
+    width: 120px;
+    height: 120px;
+  }
+  .brand-name {
+    font-size: 0.9rem;
+  }
+  .brand-sub {
+    font-size: 0.7rem;
+  }
+}
 
 

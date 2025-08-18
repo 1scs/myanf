@@ -1,0 +1,16 @@
+{
+  "name": "anfc",
+  "version": "1.0.0",
+  "description": "ANFC - Advanced Nursing and Family Care Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -o",
+    "start": "npx http-server . -p 3000"
+  },
+  "keywords": ["healthcare", "nursing", "family-care"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

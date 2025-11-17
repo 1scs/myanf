@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/styles.css?v=703573" />
     <meta name="theme-color" content="#703572" />
   </head>
-  <body>
+  <body class="narrow-content">
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">
@@ -22,50 +22,50 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="compliance.html">Compliance</a>
+          <div class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-dropdown-toggle">Services</a>
+            <div class="nav-dropdown-menu">
+              <a href="healthcare.html">Healthcare</a>
+              <a href="corporate.html">Corporate</a>
+            </div>
+          </div>
           <a href="employment.html" aria-current="page">Employment</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a class="btn btn-primary nav-cta" href="tel:301-732-7272">301-732-7272</a>
+        <a class="btn btn-primary nav-cta" href="tel:888-688-2632">888-688-2632</a>
         <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
       </div>
       <div id="mobile-menu" class="container mobile-menu" hidden>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="compliance.html">Compliance</a>
+        <a href="healthcare.html">Healthcare</a>
+        <a href="corporate.html">Corporate</a>
         <a href="employment.html" aria-current="page">Employment</a>
         <a href="contact.html">Contact</a>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero-banner">
         <div class="container">
-          <h1 data-animate>Employment Opportunities</h1>
-          <p class="muted" data-animate style="max-width: 75ch">ANFC is always looking for exceptional people. If you are a caring, qualified, and credentialed nursing professional or non-medical companion, we want you to join our team.
-          <br><br>We provide in-home services for both medical and non-medical care. If you are a Registered Nurse (RN), Licensed Practical Nurse (LPN), Licensed Vocational Nurse (LVN), Certified Nursing Assistant (CNA), home health aide (HHA), etc., ANFC is the place for you.</br></br></p>
-                     <div style="text-align: center; margin-top: 2rem;">
-             <img src="assets/images/Employment1.jpg" alt="ANFC Employment Opportunities" loading="lazy" style="width: 80%; max-width: 800px; height: auto; display: block; margin: 1 auto; border-radius: 12px;">
-             <p class="muted" data-animate style="max-width: 75ch; margin: 2rem 0 2rem 0; text-align: left;">In addition, ANFC recruits and refers nursing professionals for temporary, temp-to-hire, or direct hire/permanent placement opportunities with healthcare facilities in Washington, D.C., Maryland, and Virginia.</p>
-           </div>
+          <div class="healthcare-images-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="healthcare-image" style="width: 100%; height: 400px; border-radius: 1rem; overflow: hidden;">
+              <img src="assets/images/Employement-Opportunities.jpg" alt="Employment Opportunities" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            </div>
+            <div class="healthcare-image" style="width: 100%; height: 400px; border-radius: 1rem; overflow: hidden;">
+              <img src="assets/images/Employment.jpg" alt="Employment" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            </div>
+          </div>
+          <div class="hero-banner-content">
+            <p data-animate style="transition-delay: 80ms; font-size: 1.25rem; font-weight: 500; margin-bottom: 0;">ANFC is always looking for exceptional talent. If you are a professional interested in a medical, dental, or corporate opportunity, we want you to join our team.</p>
+          </div>
         </div>
-             </section>
+      </section>
 
-       <section style="margin-top: -3rem;">
-         <div class="container grid-2">
-           <div class="card" data-animate>
-             <h3>Open roles</h3>
-             <ul class="checklist" style="margin-top:.5rem">
-               <li><span class="check"></span><span>Registered Nurse (RN)</span></li>
-               <li><span class="check"></span><span>Licensed Practical/Vocational Nurse (LPN/LVN)</span></li>
-               <li><span class="check"></span><span>Certified Nursing Assistant (CNA)</span></li>
-               <li><span class="check"></span><span>Home Health Aide (HHA)</span></li>
-               <li><span class="check"></span><span>Non-medical Companions</span></li>
-             </ul>
-           </div>
-          <div class="card" data-animate>
+      <section>
+        <div class="container">
+          <div class="card" data-animate style="max-width: 800px; margin: 0 auto;">
             <h3>Apply now</h3>
             <p class="muted">Please upload your resume below or email your resume and contact information to us at <strong>jobs@myanfc.com</strong>.</p>
             <form action="https://formspree.io/f/mwkgbvnl" method="POST" class="form-grid" style="margin-top:.75rem">
@@ -96,7 +96,6 @@
               </div>
             </form>
           </div>
-        </div>
       </section>
     </main>
 
@@ -108,15 +107,13 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="compliance.html">Compliance</a>
           <a href="employment.html">Employment</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html#homecare">Homecare</a>
-          <a href="services.html#facilities">Healthcare Facilities</a>
-          <a href="services.html#recruiting">Recruiting & Placement</a>
+          <a href="healthcare.html">Healthcare</a>
+          <a href="corporate.html">Corporate</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>

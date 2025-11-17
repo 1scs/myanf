@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="icon" href="Logo/ANFC_Now let me check if there are any remote HTML files that also need updating:
+    <link rel="icon" href="Logo/ANFC_Logo.png" type="image/png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact — ANFC</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/styles.css?v=703573" />
     <meta name="theme-color" content="#703572" />
   </head>
-  <body>
+  <body class="narrow-content">
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">
@@ -22,80 +22,59 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="compliance.html">Compliance</a>
+          <div class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-dropdown-toggle">Services</a>
+            <div class="nav-dropdown-menu">
+              <a href="healthcare.html">Healthcare</a>
+              <a href="corporate.html">Corporate</a>
+            </div>
+          </div>
           <a href="employment.html">Employment</a>
           <a href="contact.html" aria-current="page">Contact</a>
         </nav>
-        <a class="btn btn-primary nav-cta" href="tel:301-732-7272">301-732-7272</a>
+        <a class="btn btn-primary nav-cta" href="tel:888-688-2632">888-688-2632</a>
         <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
       </div>
       <div id="mobile-menu" class="container mobile-menu" hidden>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="compliance.html">Compliance</a>
+        <a href="healthcare.html">Healthcare</a>
+        <a href="corporate.html">Corporate</a>
         <a href="employment.html">Employment</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero-banner">
         <div class="container">
-          <h1 data-animate>Contact Us</h1>
-          <p class="muted" data-animate style="max-width: 75ch">If you are interested in ANFC's services or employment, please contact us via phone 301-732-7272 or any of the following links.</p>
+          <div class="hero-banner-image" style="margin-bottom: 2rem;">
+            <img src="assets/images/Contact-US.jpg" alt="Contact Us" />
+          </div>
+          <div class="hero-banner-content">
+            <p data-animate style="transition-delay: 80ms; font-size: 1.25rem; font-weight: 500; margin-bottom: 1rem;">At ANFC, we bring together strategy, insight, and execution to help businesses build teams that power success.</p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <div class="container grid-2">
-          <div class="card" data-animate>
-            <h3>Send a message</h3>
-            <form action="mailto:contact@myanfc.com" method="POST" class="form-grid" style="margin-top:.75rem">
-              <div>
-                <label for="name">Full name</label>
-                <input id="name" name="name" type="text" placeholder="Jane Doe" required />
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
-              <div>
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
-              </div>
-              <div class="full">
-                <label for="topic">Topic</label>
-                <select id="topic" name="topic">
-                  <option>Homecare</option>
-                  <option>Facility staffing</option>
-                  <option>Recruiting & placement</option>
-                  <option>Careers</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="full">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="How can we help?"></textarea>
-              </div>
-              <div class="full">
-                <button class="btn btn-primary" type="submit">Send message</button>
-              </div>
-            </form>
+      <section class="services-section">
+        <div class="container">
+          <div class="section-header section-header-left">
+            <h2 class="section-title" data-animate>Why Choose Us?</h2>
+            <p class="section-desc" data-animate style="transition-delay: 80ms;">Because of our healthcare and corporate expertise. We know the medical, dental, and corporate industries inside and out.</p>
+            <p class="section-desc" data-animate style="transition-delay: 100ms; margin-top: 1rem;">We use a personalized approach. Every organization is unique, so we tailor our services to your needs.</p>
+            <p class="section-desc" data-animate style="transition-delay: 120ms; margin-top: 1rem;">We are results driven so we match quality talent with lasting opportunities.</p>
+            <p class="section-desc" data-animate style="transition-delay: 140ms; margin-top: 1rem;">As a trusted partnership, we act as an extension of your team, not just a vendor.</p>
+            <p class="section-desc" data-animate style="transition-delay: 160ms; margin-top: 1rem;">We aim to streamline your HR operations and stay compliant with industry standards.</p>
           </div>
-          <div data-animate>
-            <div class="eyebrow">Reach us</div>
-            <h2 class="section-title">We’re here to help</h2>
-            <p class="section-desc">Prefer to talk? Call or email and we’ll connect you with the right team.</p>
-            <div class="card" style="margin-top:.75rem">
-              <p class="muted">Phone: <strong>301-732-7272</strong></p>
-              <p class="muted">Email: <strong>servicerequests@myanfc.com</strong></p>
-              <p class="muted">Service area: DC, Maryland, Virginia</p>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-              <img src="assets/images/Registered_Nurses.jpg" alt="ANFC Registered Nurses - Ready to Help" loading="lazy" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 1 auto; border-radius: 12px;">
-            </div>
+        </div>
+      </section>
+
+      <section class="services-section">
+        <div class="container">
+          <div class="section-header section-header-left">
+            <p class="section-desc" data-animate style="transition-delay: 80ms; font-size: 1.1rem; line-height: 1.7;">Ready to grow your business with the right people and HR support? Let us partner with you to discover how ANFC can help your organization thrive. Contact us by phone at <strong>(888) 688-ANFC (2632)</strong> or via email at <strong>requests@myanfc.com</strong> to schedule a consultation.</p>
           </div>
         </div>
       </section>
@@ -109,15 +88,13 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="compliance.html">Compliance</a>
           <a href="employment.html">Employment</a>
           <a href="contact.html" aria-current="page">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html#homecare">Homecare</a>
-          <a href="services.html#facilities">Healthcare Facilities</a>
-          <a href="services.html#recruiting">Recruiting & Placement</a>
+          <a href="healthcare.html">Healthcare</a>
+          <a href="corporate.html">Corporate</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>

@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#703572" />
     <link rel="icon" href="Logo/ANFC_Logo.png" type="image/png" />
   </head>
-  <body>
+  <body class="narrow-content">
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">
@@ -24,19 +24,25 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="compliance.html">Compliance</a>
+          <div class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-dropdown-toggle">Services</a>
+            <div class="nav-dropdown-menu">
+              <a href="healthcare.html">Healthcare</a>
+              <a href="corporate.html">Corporate</a>
+            </div>
+          </div>
           <a href="employment.html">Employment</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a class="btn btn-primary nav-cta" href="tel:301-732-7272">301-732-7272</a>
+        <a class="btn btn-primary nav-cta" href="tel:888-688-2632">888-688-2632</a>
         <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
       </div>
       <div id="mobile-menu" class="container mobile-menu" hidden>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="compliance.html">Compliance</a>
+        <a href="healthcare.html">Healthcare</a>
+        <a href="corporate.html">Corporate</a>
         <a href="employment.html">Employment</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -176,15 +182,18 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="compliance.html">Compliance</a>
           <a href="employment.html">Employment</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html#homecare">Homecare</a>
-          <a href="services.html#facilities">Healthcare Facilities</a>
-          <a href="services.html#recruiting">Recruiting & Placement</a>
+          <a href="healthcare.html">Healthcare</a>
+          <a href="corporate.html">Corporate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="terms-conditions.html">Terms and Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
         </div>
       </div>
     </footer>

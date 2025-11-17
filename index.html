@@ -24,94 +24,72 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html" aria-current="page">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="compliance.html">Compliance</a>
+          <div class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-dropdown-toggle">Services</a>
+            <div class="nav-dropdown-menu">
+              <a href="healthcare.html">Healthcare</a>
+              <a href="corporate.html">Corporate</a>
+            </div>
+          </div>
           <a href="employment.html">Employment</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a class="btn btn-primary nav-cta" href="tel:301-732-7272">301-732-7272</a>
+        <a class="btn btn-primary nav-cta" href="tel:888-688-2632">888-688-2632</a>
         <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
       </div>
       <div id="mobile-menu" class="container mobile-menu" hidden>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="compliance.html">Compliance</a>
+        <a href="healthcare.html">Healthcare</a>
+        <a href="corporate.html">Corporate</a>
         <a href="employment.html">Employment</a>
         <a href="contact.html">Contact</a>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div>
-            <h1 data-animate>Advanced Nursing and Family Care (ANFC)</h1>
-            <p data-animate style="transition-delay: 80ms">ANFC was established on the belief that quality and compassion are absolute musts when providing healthcare. ANFC strives to be your first choice for caring nursing professionals.</p>
-            <div class="hero-cta" data-animate style="transition-delay: 160ms">
-              <a class="btn btn-primary" href="contact.html">Request Care</a>
-              <a class="btn btn-secondary" href="services.html">Explore Services</a>
-            </div>
-            <ul class="checklist" data-animate style="margin-top:2rem; transition-delay: 240ms">
-              <li><span class="check" aria-hidden="true"></span><span>Licensed in Washington, DC, Maryland and Virginia</span></li>
-              <li><span class="check" aria-hidden="true"></span><span>Qualified and credentialed nursing professionals</span></li>
-              <li><span class="check" aria-hidden="true"></span><span>Medical and non-medical homecare, staffing, and recruiting</span></li>
-            </ul>
+      <section class="hero-banner">
+        <div class="container">
+          <div class="hero-banner-image">
+            <img src="assets/images/Hero-Image.png" alt="ANFC Banner" />
           </div>
-          <div class="hero-card" data-animate style="padding:0; overflow:hidden">
-            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600&auto=format&fit=crop" alt="Nurse providing compassionate homecare" style="display:block; width:100%; height:100%; object-fit:cover;" />
+          <div class="hero-banner-content">
+            <h1 data-animate>Advanced Nursing and Family Care (ANFC)</h1>
+            <p data-animate style="transition-delay: 80ms; font-size: 1.25rem; font-weight: 500; margin-bottom: 1.5rem;">ANFC is your trusted partner for strategic sourcing, recruiting, and Human Resource (HR) consulting.</p>
+            <p data-animate style="transition-delay: 120ms; margin-bottom: 1.5rem;">At ANFC, we connect talent, opportunity, and organizational growth. With extensive operations and human resource management experience, we understand the needs and unique challenges faced by organizations. From staffing shortages and compliance requirements to retention and employee engagement, we help businesses run efficiently by aligning the right people, processes, and performance strategies.</p>
+            <p data-animate style="transition-delay: 160ms; font-style: italic; font-weight: 500;">Our mission is simple… It is to help businesses build strong teams by attracting, developing, and retaining exceptional professionals.</p>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="services-section">
         <div class="container">
           <div class="section-header">
-            <div class="eyebrow">Our Services</div>
-            <h2 class="section-title">Holistic care for every stage and setting</h2>
-            <p class="section-desc">We support families at home and organizations in care settings with dependable, compassionate professionals.</p>
+            <h2 class="section-title">Explore Our Services</h2>
+            <p class="section-desc">Comprehensive solutions tailored to your organizational needs</p>
           </div>
-          <div class="grid-3">
-                                      <div class="card" data-animate>
-              <div class="service-image">
-                <img src="assets/images/recruiting.jpg" alt="Recruiting and placement services" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="services-grid-new">
+            <a href="healthcare.html" class="service-card" data-animate>
+              <div class="service-image-wrapper">
+                <img src="assets/images/Healthcare-Services.jpg" alt="Healthcare Services" loading="lazy" />
+                <div class="service-overlay"></div>
               </div>
-              <h3>Recruiting & Placement Referrals</h3>
-              <p>ANFC provides assistance with identifying qualified nursing professionals for direct hire and healthcare facilities.</p>
-            </div>
-            <div class="card" data-animate style="transition-delay: 80ms">
-              <div class="service-image">
-                <img src="assets/images/healthcare_facilities.jpg" alt="Healthcare facility staffing" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="service-content">
+                <h3>Healthcare</h3>
+                <p>Expert staffing solutions for healthcare facilities, ensuring quality care and compliance.</p>
               </div>
-              <h3>Healthcare Facilities</h3>
-              <p>ANFC is your source for caring nursing professionals. We are committed to providing the best people and service.</p>
-            </div>
-            <div class="card" data-animate style="transition-delay: 160ms">
-              <div class="service-image">
-                <img src="assets/images/homecare.jpg" alt="Recruitment and placement services" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+            </a>
+            <a href="corporate.html" class="service-card" data-animate style="transition-delay: 80ms">
+              <div class="service-image-wrapper">
+                <img src="assets/images/Corporate.jpg" alt="Corporate Services" loading="lazy" />
+                <div class="service-overlay"></div>
               </div>
-              <h3>Home Care</h3>
-              <p>ANFC provides qualified and credentialed nursing professionals for in-home medical and non-medical care.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container grid-2">
-          <div data-animate>
-            <div class="eyebrow">Why families choose ANFC</div>
-            <h2 class="section-title">Clinical excellence with a human touch</h2>
-            <ul class="checklist" style="margin-top: .75rem">
-              <li><span class="check"></span><span>Thorough screening and background checks</span></li>
-              <li><span class="check"></span><span>Licensed clinicians and trained caregivers</span></li>
-              <li><span class="check"></span><span>Care plans personalized to each family</span></li>
-              <li><span class="check"></span><span>Continuity you can count on</span></li>
-            </ul>
-          </div>
-          <div class="card" data-animate>
-            <p class="section-desc" style="margin: 0;">With statistical data reports reflecting a shortage of nursing professionals across the United States, it is reasonable to assume that the number of caring nursing professionals is also substantially low. Advanced Nursing and Family Care (ANFC) saw this as an opportunity to help people and committed to identifying caring nursing professionals to meet this demand.</p>
-            <p class="section-desc" style="margin: 0; margin-top: 1rem;">With allegiance to both its clients and staff, ANFC strives to be the industry leader in client service and one of the best places to work.</p>
+              <div class="service-content">
+                <h3>Corporate</h3>
+                <p>Strategic HR consulting and talent acquisition for corporate environments.</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -125,15 +103,13 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="compliance.html">Compliance</a>
           <a href="employment.html">Employment</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html#homecare">Homecare</a>
-          <a href="services.html#facilities">Healthcare Facilities</a>
-          <a href="services.html#recruiting">Recruiting & Placement</a>
+          <a href="healthcare.html">Healthcare</a>
+          <a href="corporate.html">Corporate</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>

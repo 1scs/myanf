@@ -87,6 +87,7 @@ body {
 .top-bar-content a::before {
   content: "📞";
   font-size: 1rem;
+  filter: brightness(0) invert(1);
 }
 
 .top-bar-content a:hover {
@@ -307,6 +308,36 @@ body {
 
 .hero-banner-content {
   padding: 0;
+}
+
+/* Side-by-side hero layout for home page */
+.hero-banner-side-by-side .hero-banner-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-banner-side-by-side .hero-banner-image {
+  max-width: 100%;
+  margin: 0;
+}
+
+.hero-banner-side-by-side .hero-banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .hero-banner-side-by-side .hero-banner-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-banner-side-by-side .hero-banner-image {
+    margin: 0 auto 1.5rem;
+  }
 }
 
 
@@ -634,7 +665,7 @@ section { padding: 3rem 0; }
   display: grid; 
   grid-template-columns: 1.5fr 1fr 1fr 1fr; 
   gap: 2rem; 
-  align-items: start;
+  align-items: center;
 }
 .site-footer .muted { color: rgba(255, 255, 255, 0.8); }
 .footer-col h4 { font-weight: 700; margin-bottom: 0.5rem; color: white; }
@@ -646,7 +677,7 @@ section { padding: 3rem 0; }
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .footer-logo .brand-logo {

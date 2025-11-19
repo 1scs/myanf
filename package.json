@@ -1,7 +1,7 @@
 {
   "name": "anfc",
   "version": "1.0.0",
-  "description": "ANFC - Advanced Nursing and Family Care Website",
+  "description": "ANFC Website",
   "main": "index.html",
   "scripts": {
     "dev": "npx http-server . -p 3000 -o",

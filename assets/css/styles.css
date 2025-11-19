@@ -106,8 +106,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0;
-  min-height: 80px;
+  padding: 0;
+  min-height: auto;
 }
 .brand {
   display: flex;
@@ -116,16 +116,16 @@ body {
   text-decoration: none;
 }
 .brand-logo {
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
   background: url('../../Logo/ANFC_Logo.png') no-repeat center center;
   background-size: contain;
   margin-left: 1.5rem;
 }
 
 .brand-logo-alt {
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
   background: url('../../Logo/logo.png') no-repeat center center;
   background-size: contain;
   margin-left: 1.5rem;
@@ -150,8 +150,8 @@ body {
 .nav-links a {
   color: var(--brand-muted);
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
   border-radius: 0.5rem;
 }
 .nav-links a:hover, .nav-links a[aria-current="page"] {
@@ -196,6 +196,7 @@ body {
   padding: 0.75rem 1rem;
   color: var(--brand-muted);
   text-decoration: none;
+  font-weight: 700;
   border-radius: 0;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -242,6 +243,7 @@ body {
     padding: 0.75rem 1rem;
     text-decoration: none;
     color: var(--brand-secondary);
+    font-weight: 700;
     border-radius: 0.5rem;
   }
   .mobile-menu a:hover { background: var(--brand-tint-1); }
@@ -284,14 +286,15 @@ body {
 
 /* Hero Banner */
 .hero-banner {
-  padding: 3rem 0 1.5rem;
+  padding: 1rem 0 1.5rem;
 }
 
 .hero-banner-image {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
   border-radius: 1rem;
   overflow: hidden;
-  margin-bottom: 1.5rem;
 }
 
 
@@ -371,9 +374,9 @@ section { padding: 3rem 0; }
 
 .section-header-left {
   text-align: left;
-  max-width: 800px;
+  max-width: 100%;
   margin-left: 0;
-  margin-right: auto;
+  margin-right: 0;
   margin-bottom: 0;
 }
 
@@ -385,6 +388,7 @@ section { padding: 3rem 0; }
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+  max-width: 100%;
 }
 .eyebrow { color: var(--brand-primary-600); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
 .section-title { font-weight: 800; font-size: clamp(1.5rem, 2.4vw, 2rem); letter-spacing: -0.02em; }

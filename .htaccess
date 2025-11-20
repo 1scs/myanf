@@ -1,0 +1,16 @@
+# Redirect /myanf/ to root
+RewriteEngine On
+RewriteBase /
+
+# Redirect /myanf/ to root (remove subdirectory)
+RewriteCond %{REQUEST_URI} ^/myanf/(.*)$
+RewriteRule ^myanf/(.*)$ /$1 [R=301,L]
+
+# Serve index.html for root directory
+DirectoryIndex index.html
+
+# Enable CORS if needed
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
